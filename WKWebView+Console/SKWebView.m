@@ -29,7 +29,7 @@
 }
 - (void)showConsole {
     
-    //重写js的console.log函数的方法
+    //rewrite the method of console.log
     NSString *jsCode = @"console.log = (function(oriLogFunc){\
     return function(str)\
     {\
@@ -38,6 +38,7 @@
     }\
     })(console.log);";
     
+    //injected the method when H5 starts to create the DOM tree
     [self.configuration.userContentController addUserScript:[[WKUserScript alloc] initWithSource:jsCode injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:YES]];
 }
 

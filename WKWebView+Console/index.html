@@ -1,81 +1,13 @@
 <html>
-    <!--描述网页信息-->
+    
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>title</title>
- 		<style>
-            *{
-                font-size: 50px;
-            }
-        
-            .btn{height:80px; width:80%; padding: 0px 30px; background-color: #0071E7; border: solid 1px #0071E7; border-radius:5px; font-size: 1em; color: white}
- 		</style>
-        
+<!--      Don't change js any code. All code write in native  -->
         <script>
-            
-
-
-
-            console.log("好爽啊 ");
-            //OC调用JS的方法列表
-        	function alertMobile() {
-                document.getElementById('mobile').innerHTML = '不带参数'
-        	}
-
-        	function alertName(msg) {
-                //有一个参数
-                document.getElementById('name').innerHTML = '有一个参数 :' + msg
-        	}
-
-        	function alertSendMsg(num,msg) {
-        		//有两个参数
-                document.getElementById('msg').innerHTML = '有两个参数:' + num + ',' + msg + '!!'
-            }
-        
-            //JS响应方法列表
-            function btnClick1() {
-                window.webkit.messageHandlers.showMobile.postMessage(null)
-            }
-
-            function btnClick2() {
-                window.webkit.messageHandlers.showName.postMessage('有一个参数')
-            }
-
-            function btnClick3() {
-                window.webkit.messageHandlers.showSendMsg.postMessage(['两个参数One', '两个参数Two'])
-            }
-
+            console.log("success");
         </script>
-        
-        
     </head>
-
-    <!--网页具体内容-->
     <body>
-        <br/>
-
-		<div>
-			<label>WKWebView&JS交互</label>
-		</div>
-		<br/>
-
-        <div id="mobile"></div>
-		<div>
-			<button class="btn" type="button" onclick="btnClick1()">不带参数</button>
-		</div>
-		<br/>
-        
-        <div id="name"></div>
-		<div>
-			<button class="btn" type="button" onclick="btnClick2()">一个参数</button>
-		</div>
-		<br/>
-        
-        <div id="msg"></div>
-		<div>
-			<button class="btn" type="button" onclick="btnClick3()">两个参数</button>
-		</div>
-
-
     </body>
 </html>

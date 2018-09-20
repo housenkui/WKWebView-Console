@@ -25,16 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 设置偏好设置
     WKWebViewConfiguration *config = [[WKWebViewConfiguration alloc] init];
     config.showConsole = YES;
-    // 默认为0
-    config.preferences.minimumFontSize = 10;
-    //是否支持JavaScript
-    config.preferences.javaScriptEnabled = YES;
-    //不通过用户交互，是否可以打开窗口
-    config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
-    
+
     self.webView = [[SKWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height/2) configuration:config];
     [self.view addSubview:self.webView];
     
