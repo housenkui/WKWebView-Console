@@ -1,7 +1,3 @@
-# WKWebView-Console
-WKWebView监听js的console.log打印
+Main idea: 1. rewrite the console.log method of JS. The 2.iOS port is injected when H5 starts to create the DOM tree.
 
 
-主要思路：
-1.重写js的console.log方法。
-2.iOS端在h5开始创建DOM树的时候注入。
